@@ -8,12 +8,7 @@
 <meta name="format-detection" content="date=no" />
 <meta name="x-apple-disable-message-reformatting" />
 <title></title>
-<script>
-    let data = document.getElementById("date2");
-    let today = new Date();
-    let nextweek = new Date(today.getFullYear(), today.getMonth(), today.getDate()+14);
-    data.innerText = nextweek.getMonth()+"/"+nextweek.getDate()
-</script>
+
 <style type="text/css">/* CLIENT-SPECIFIC STYLES */
     body, table, td, a{-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;} /* Prevent WebKit and Windows mobile changing default text sizes */
     table, td{mso-table-lspace: 0pt; mso-table-rspace: 0pt;} /* Remove spacing between tables in Outlook 2007 and up */
@@ -461,3 +456,12 @@
 </table>
 </body>
 </html>
+<script>
+    let data = document.getElementById("date2");
+    let nextweek = new Date();
+    nextweek.setDate(new Date().getDate() + 14)
+    if(new Date().getDate() + 14 >= 30){
+       nextweek.setMonth(nextweek.getMonth()+1); 
+    }
+    data.innerText = nextweek.getMonth()+"/"+nextweek.getDate()
+</script>
