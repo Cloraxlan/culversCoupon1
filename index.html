@@ -8,6 +8,12 @@
 <meta name="format-detection" content="date=no" />
 <meta name="x-apple-disable-message-reformatting" />
 <title></title>
+<script>
+    let data = document.getElementById("data2");
+    let date = new Date();
+    let nextweek = new Date(today.getFullYear(), today.getMonth(), today.getDate()+14);
+    data.innerText = nextweek.getMonth()+"/"+nextweek.getDate()
+</script>
 <style type="text/css">/* CLIENT-SPECIFIC STYLES */
     body, table, td, a{-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;} /* Prevent WebKit and Windows mobile changing default text sizes */
     table, td{mso-table-lspace: 0pt; mso-table-rspace: 0pt;} /* Remove spacing between tables in Outlook 2007 and up */
@@ -287,7 +293,7 @@
                         <div class="coupon" style="max-width: 600px; width: 100%; margin: 0 auto">
                             <table border="0" cellpadding="0" cellspacing="0" class="wrapper" width="100%" style="max-width: 600px;">
                                 <tr>
-                                    <td width="100%" id="expiration-date" align="center" class="coupon-heading-expiration" style="font-family: Helvetica, Arial, sans-serif;background-color:#005696;font-size:26px;line-height:30px;padding:10px 20px 12px;margin:0px;color:#FFFFFF;"><span class="text-white" style="color:white !important;"><b class="text-white" style="font-weight:bold; color:white !important;">This delicious offer<br />expires<span class="text-white" style="color:white !important;"><span id="date1"> on <span id="date2">6/11</span></span>!</span></b></span></td>
+                                    <td width="100%" id="expiration-date" align="center" class="coupon-heading-expiration" style="font-family: Helvetica, Arial, sans-serif;background-color:#005696;font-size:26px;line-height:30px;padding:10px 20px 12px;margin:0px;color:#FFFFFF;"><span class="text-white" style="color:white !important;"><b class="text-white" style="font-weight:bold; color:white !important;">This delicious offer<br />expires<span class="text-white" style="color:white !important;"><span id="date1"> on <span id="date2"></span></span>!</span></b></span></td>
                                 </tr>
                             </table>
 
