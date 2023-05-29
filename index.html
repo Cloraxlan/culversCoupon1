@@ -10,7 +10,7 @@
 <title></title>
 <script>
     let data = document.getElementById("date2");
-    let date = new Date();
+    let today = new Date();
     let nextweek = new Date(today.getFullYear(), today.getMonth(), today.getDate()+14);
     data.innerText = nextweek.getMonth()+"/"+nextweek.getDate()
 </script>
